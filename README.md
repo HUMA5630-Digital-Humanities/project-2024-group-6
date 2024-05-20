@@ -36,6 +36,9 @@ python app.py
 # preview
 ![preview](https://github.com/HUMA5630-Digital-Humanities/project-2024-group-6/assets/128702515/7a572151-964c-4a20-aa90-f777dc9e23cd)
 
+# url
+https://project-2024-group-6.onrender.com/
+
 # Note
 
 There are still some bugs that have not been resolved.
