@@ -338,13 +338,13 @@ with gr.Blocks() as demo:
 
     def update_config():
         config_list = autogen.config_list_from_models(
-            model_list=[os.environ.get("MODEL", "gpt-4")],
+            model_list=[os.environ.get("MODEL", "gpt-35-turbo")],
         )
         if not config_list:
             # set default openAI api here
             selected_model = ""
             selected_key = ""
-            selected_url = ""
+            selected_url = "gpt-35-turbo"
 
             config_list = [
                 {
