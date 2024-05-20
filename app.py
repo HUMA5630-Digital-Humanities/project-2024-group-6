@@ -126,7 +126,6 @@ with gr.Blocks() as demo:
                     "the first task is understanding users goal and educational background, interests, career aspirations and other necessary information. "
                     "Interact with the user until you have sufficient information, or the user offers a message ending with 'Exit'."
                     "Please gently guide the user,ask questions one by one."
-                    "based on the critic feedback, if needed, further ask user."
                     "summarizing the user's information but do not do recommandations.",
             llm_config={"config_list": config_list},
             is_termination_msg=lambda msg: "EXIT" in msg["content"],  # terminate 
@@ -138,7 +137,7 @@ with gr.Blocks() as demo:
                     "based on the user's information from 'agent_survey', critic and user, plan a learning path"
                     "your task is to help user navigate through the vast ocean of courses and specializations, finding the perfect path that aligns with user's background."
                     "the learning path should include necessary information of course such as course title, providers and thoughtful reasons for the recommendation"
-                    "Then, ask the critic's opinion. and try to improve based on the opinion of critics"
+                    "Then, ask the user's opinion. and try to improve based on the feedback from user"
                     "Rule 1. The total number of courses should be less than 4",
             llm_config={"config_list": config_list},
             is_termination_msg=lambda msg: "EXIT" in msg["content"],  
@@ -190,7 +189,11 @@ with gr.Blocks() as demo:
             human_input_mode="NEVER",  # never ask for human input
         ) 
         #group chat with critic
-        groupchat = autogen.GroupChat(agents=[userproxy, angent_survey, angent_recommander,critic,Learning_Path_summary], messages=[], max_round=20)
+        #groupchat = autogen.GroupChat(agents=[userproxy, angent_survey, angent_recommander,critic,Learning_Path_summary], messages=[], max_round=20)
+
+        #group chat without critic
+        groupchat = autogen.GroupChat(agents=[userproxy, angent_survey, angent_recommander], messages=[], max_round=20)
+        
         manager = autogen.GroupChatManager(groupchat=groupchat, llm_config={"config_list": config_list})
 
         # assistant.register_reply([Agent, None], update_agent_history)
@@ -347,8 +350,8 @@ with gr.Blocks() as demo:
                 {
                     "api_key": selected_key,
                     "base_url": selected_url,
-                    #"api_type": "azure",
-                    #"api_version": "2023-07-01-preview",
+                    "api_type": "azure",
+                    "api_version": "2023-07-01-preview",
                     "model": selected_model,
                 }
             ]
@@ -381,6 +384,7 @@ with gr.Blocks() as demo:
             choices=[
                 "gpt-4",
                 "gpt-3.5-turbo",
+                "gpt-35-turbo",
             ],
             allow_custom_value=True,
             value="gpt-4",
