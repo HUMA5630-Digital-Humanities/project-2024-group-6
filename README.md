@@ -6,7 +6,7 @@
 
 
 # Topic
-This project is focused on developing a Coursera recommender system called PathFinder, powered by AutoGen. This AI equips PathFinder with the ability to help users navigate through Coursera's vast array of courses and specializations. It provides personalized recommendations based on the user's educational background, interests, and career goals. 
+This project is focused on developing an course recommender AI agent called PathFinder, powered by AutoGen. This AI equips PathFinder with the ability to help users navigate through Coursera's vast array of courses and specializations. It provides personalized recommendations based on the user's educational background, interests, and career goals. 
 
 # Agent group
 
