@@ -8,7 +8,13 @@
 # Topic
 This project is focused on developing a Coursera recommender system called PathFinder, powered by AutoGen. This AI equips PathFinder with the ability to help users navigate through Coursera's vast array of courses and specializations. It provides personalized recommendations based on the user's educational background, interests, and career goals. 
 
-# Framework
+# Agent group
+
+**Survey Agent**: This agent gathers essential information about the user's educational background, interests, and career aspirations to understand their goals better.
+
+**Recommend Agent**: After determining the user's needs from the survey agent, this agent designs a personalized learning pathway. It provides course information and reasons why these courses are suitable for the user.
+
+**Critic**: The critic agent summarizes the information, reflects on it, and checks the facts. It provides feedback to ensure the learning pathway is accurate and tailored to the user's needs.
 
 
 # How to use
@@ -27,7 +33,7 @@ pip install -U -r requirements.txt
 python app.py
 ```
 
-# priview
+# preview
 ![preview](https://github.com/HUMA5630-Digital-Humanities/project-2024-group-6/assets/128702515/7a572151-964c-4a20-aa90-f777dc9e23cd)
 
 # Note
@@ -38,3 +44,4 @@ There are still some bugs that have not been resolved.
     Possible solution: Mark the source of each message in the chat history, differentiate it from the user agent
     
 2. When the group chat carries on multiple rounds of dialogue, a token may exceed the agent's limit, causing an error.
+3. There is still a problem with the illusion, such as the wrong course url provided.
