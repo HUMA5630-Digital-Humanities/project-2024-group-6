@@ -12,7 +12,7 @@ from gradio import ChatInterface, Request
 from gradio.helpers import special_args
 
 LOG_LEVEL = "INFO"
-TIMEOUT = 200
+TIMEOUT = 120
 
 
 class myChatInterface(ChatInterface):
@@ -192,7 +192,7 @@ with gr.Blocks() as demo:
         #groupchat = autogen.GroupChat(agents=[userproxy, angent_survey, angent_recommander,critic,Learning_Path_summary], messages=[], max_round=20)
 
         #group chat without critic
-        groupchat = autogen.GroupChat(agents=[userproxy, angent_survey, angent_recommander], messages=[], max_round=20)
+        groupchat = autogen.GroupChat(agents=[userproxy, angent_survey, angent_recommander], messages=[], max_round=10)
         
         manager = autogen.GroupChatManager(groupchat=groupchat, llm_config={"config_list": config_list})
 
