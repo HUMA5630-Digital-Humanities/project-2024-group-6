@@ -40,8 +40,10 @@ python app.py
 
 There are still some bugs that have not been resolved.
 1. Some messages sent to the group manager by the AI agent will be presented in the chat list as the user's role.
+
     Possible reason: The order and quantity of dialogues in the chatgroup are uncertain
+
     Possible solution: Mark the source of each message in the chat history, differentiate it from the user agent
     
-2. When the group chat carries on multiple rounds of dialogue, a token may exceed the agent's limit, causing an error.
-3. There is still a problem with the illusion, such as the wrong course url provided.
+3. When the group chat carries on multiple rounds of dialogue, a token may exceed the agent's limit, causing an error.
+4. There is still a problem with the illusion, such as the wrong course url provided.
