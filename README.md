@@ -39,6 +39,9 @@ python app.py
 # url
 https://project-2024-group-6.onrender.com/
 
+# user test video link
+https://hkustconnect-my.sharepoint.com/:f:/g/personal/kxuav_connect_ust_hk/Eu_aQEkthDpNrb5oQAkHYmQBye3XiAxmz-k-doIwiKQWKQ?e=SqN4jw
+
 # Note
 
 There are still some bugs that have not been resolved.
