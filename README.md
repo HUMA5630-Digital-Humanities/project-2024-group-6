@@ -33,14 +33,15 @@ pip install -U -r requirements.txt
 python app.py
 ```
 
-# preview
-![preview](https://github.com/HUMA5630-Digital-Humanities/project-2024-group-6/assets/128702515/7a572151-964c-4a20-aa90-f777dc9e23cd)
-
-# url
+# URL
 https://project-2024-group-6.onrender.com/
+
+[![preview](https://github.com/HUMA5630-Digital-Humanities/project-2024-group-6/assets/128702515/7a572151-964c-4a20-aa90-f777dc9e23cd)](https://project-2024-group-6.onrender.com/)
 
 # user test video link
 https://hkustconnect-my.sharepoint.com/:f:/g/personal/kxuav_connect_ust_hk/Eu_aQEkthDpNrb5oQAkHYmQBye3XiAxmz-k-doIwiKQWKQ?e=SqN4jw
+
+![preview of recordings](preview_user-guide-recordings_group6.png)
 
 # Note
 
@@ -53,3 +54,8 @@ There are still some bugs that have not been resolved.
     
 3. When the group chat carries on multiple rounds of dialogue, a token may exceed the agent's limit, causing an error.
 4. There is still a problem with the illusion, such as the wrong course url provided.
+
+# Presentation Slides
+[PDF version](https://github.com/HUMA5630-Digital-Humanities/project-2024-group-6/blob/main/Path_advisor_present.pdf)
+
+[![preview_presentation-slides_group6](preview_presentation-slides_group6.png)](https://github.com/HUMA5630-Digital-Humanities/project-2024-group-6/blob/main/Path_advisor_present.pdf)
